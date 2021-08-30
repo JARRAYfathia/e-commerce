@@ -55,9 +55,8 @@ export default function ProductList(props) {
     <div>
        <div className="row">
         <h1> Pour avoir un nouveau article</h1>
-        
-        <button className="button" onClick={createHandler} ><span> Cliquer ici pour ajouter un article </span></button>
-           </div>
+          <button className="button" onClick={createHandler} ><span> Cliquer ici pour ajouter un article </span></button>
+        </div>
            
       {loadingDelete && <Loading></Loading>}
       {errorDelete && <MessageBox variant="danger">{errorDelete}</MessageBox>}
@@ -71,6 +70,7 @@ export default function ProductList(props) {
         <MessageBox variant="danger">{error}</MessageBox>
       ) : (
         <table className="table" id="products">
+
           <thead>
           <tr >
           <h2 style={{fontFamily:"Times New Roman, Times, serif", fontSize:"30px", color:"black", textAlign:"center"}}> Liste des produits existants</h2>
@@ -84,6 +84,7 @@ export default function ProductList(props) {
                <th>Actions possibles</th>
             </tr>
           </thead>
+
           <tbody style={{fontFamily:"Times New Roman, Times, serif", fontSize:"15px"}}>
             {products.map((product) => (
               <tr key={product._id}>
@@ -92,29 +93,25 @@ export default function ProductList(props) {
                 <td>{product.price}</td>
                 <td>{product.category}</td>
                 <td>{product.countInStock}</td>
-               
                 <td>
                   <button
                     type="button"
                     className="small"
                     onClick={() =>
-                      props.history.push(`/product/${product._id}/edit`)
-                    }
-                  >
+                    props.history.push(`/product/${product._id}/edit`)}>
                     Modifier
                   </button>
-                
                   <button
                     type="button"
                     className="small"
-                    onClick={() => deleteHandler(product)}
-                  >
+                    onClick={() => deleteHandler(product)}>
                    Supprimer
                   </button>
                 </td>
               </tr>
             ))}
           </tbody>
+          
         </table>
       )}
     </div>

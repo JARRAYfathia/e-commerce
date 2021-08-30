@@ -38,7 +38,6 @@ footer {
   background-color: #203040;
   color: #ffffff;
 }
-
 /* Header */
 header a {
   color: #b43d3d;
@@ -81,7 +80,6 @@ a.brand {
   width: 100%;
   bottom: 0;
 }
-
 .headerComp{
 color: #b43d3d;
 text-decoration: none;
@@ -134,9 +132,8 @@ text-decoration: none;
   background-image: url("./images/registerr.jpg");
   clip-path:ellipse(50% 50%);
   padding: 70px;
-  
-  }
-  .sign-page{
+}
+.sign-page{
     display: block;
     margin-top: 200%;
     margin-left: auto;
@@ -147,10 +144,7 @@ text-decoration: none;
     margin-top: 2%;
     clip-path:ellipse(100% 50%);
     padding: 70px;
-    
-    }
-
-
+}
 /* Card */
 .card{
   flex-wrap: wrap;
@@ -167,7 +161,6 @@ text-decoration: none;
   background-size: 1000% 1000%;
   animation: gradient 10s ease infinite;
 }
-
 @keyframes gradient {
   100% {
       background-position: 100% 50%;
@@ -179,8 +172,6 @@ text-decoration: none;
       background-position: 100% 100%;
   }
 }
-
-
 /*image*/
 img {
   border-radius: 5.5rem;
@@ -198,7 +189,6 @@ h2 {
   font-size: 10px;
   padding: 1rem 0;
 }
-
 a:link {
   text-decoration: none;
 }
@@ -218,12 +208,9 @@ a:link {
   font-size: small;
   font-family: Georgia, 'Times New Roman', Times, serif;
 }
-
 .column1 {
-
   padding: 0%;
   width: 10px;
-  
 }
 .column2 {
   padding: 0%;
@@ -231,7 +218,6 @@ a:link {
 }
 .min-30 {
   min-width: 30rem;
-
 }
 ul {
   padding: 0;
@@ -252,8 +238,7 @@ button {
   font-family: Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
- 
-}
+ }
 button{
   background-color: #f8f8f8;
   cursor:pointer;
@@ -267,7 +252,6 @@ button:hover {
 button.primary {
   background-color: #f0c040;
 }
-
 img.large {
   width: 100%;
 }
@@ -289,7 +273,6 @@ img.large {
 /* Alert */
 .loading {
   display: block !important;
-  
 }
 .success {
   color: #20a020;
@@ -325,23 +308,19 @@ img.large {
   left: 50%;
   margin-right: -50%;
 }
-
 @-webkit-keyframes spin {
   0% { -webkit-transform: rotate(0deg); }
   100% { -webkit-transform: rotate(360deg); }
 }
-
 @keyframes spin {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
 /*cartScreen */
-
 .item {
   display: flex;
   padding: 20px 30px;
   height: 200px;
-  
 }
 .title {
   height: 60px;
@@ -409,16 +388,12 @@ img.large {
   border-collapse: collapse;
   width: 100%;
 }
-
 #products td, #products th {
   border: 1px solid #ddd;
   padding: 8px;
 }
-
 #products tr:nth-child(even){background-color: #f2f2f2;}
-
 #products tr:hover {background-color: #ddd;}
-
 #products th {
   padding-top: 12px;
   padding-bottom: 12px;
@@ -427,7 +402,6 @@ img.large {
   color: whitesmoke;
   text-align: center;
 }
-
 /* ajouter un produit= boutton*/
 .button {
   display: inline-block;
@@ -444,14 +418,12 @@ img.large {
   cursor: pointer;
   margin: 5px;
 }
-
 .button span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
-
 .button span:after {
   content: '\00bb';
   position: absolute;
@@ -460,11 +432,9 @@ img.large {
   right: -50px;
   transition: 0.5s;
 }
-
 .button:hover span {
   padding-right: 25px;
 }
-
 .button:hover span:after {
   opacity: 1;
   right: 0;
@@ -484,7 +454,6 @@ margin-right: -50%;
   background-size: 1000% 1000%;
   animation: gradient 5s ease infinite;
 }
-
 @keyframes gradient {
   100% {
       background-position: 100% 50%;
@@ -504,7 +473,6 @@ margin-right: -50%;
   background-size: 1000% 1000%;
   animation: gradient 5s ease infinite;
 }
-
 @keyframes gradient {
   100% {
       background-position: 100% 50%;
@@ -552,7 +520,6 @@ margin-right: -50%;
   font-family: 'Luckiest Guy';
   margin-top: 0%;
   -webkit-font-smoothing: antialiased;
- 
   text-shadow:  
                  0 19px 1px rgba(0,0,0,.1),
                  0 0 6px rgba(0,0,0,.1),

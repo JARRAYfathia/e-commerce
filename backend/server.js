@@ -7,8 +7,6 @@ import userRouter from './routers/userRouter.js';
 import orderRouter from './routers/orderRouter.js';
 import uploadRouter from './routers/uploadRouter.js';
 
-
-// to update 
 dotenv.config(); 
 const app = express();
 
@@ -48,7 +46,6 @@ app.use('/uploads', express.static(path.join(__dirname, '/uploads')));
       res.send("API running...");
     })
   }
-
 
 app.use((err, req, res, next) => {
   res.status(500).send({ message: err.message });

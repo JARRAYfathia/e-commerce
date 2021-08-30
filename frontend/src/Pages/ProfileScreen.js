@@ -13,7 +13,6 @@ const ProfileScreen = (props) => {
           <Card.Body>
           <Form.Label htmlFor='firsttName'>First Name :</Form.Label>
            <Card.Title>{userInfo.Name}</Card.Title>
-         
           </Card.Body>
           <ListGroup className="list-group-flush">
           <Form.Label htmlFor='email'>Email :</Form.Label>
@@ -25,8 +24,8 @@ const ProfileScreen = (props) => {
         </Card> 
         </div>
         <Button  style={{marginLeft:'670Px' ,marginTop:'20Px'}} onClick={() => {
-                      props.history.push('/profile')}}>MODIFIER</Button>
-         </div>
+                 props.history.push('/profile')}}>MODIFIER</Button>
+        </div>
     )
 }
 export default ProfileScreen

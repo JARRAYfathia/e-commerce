@@ -35,13 +35,8 @@ export default function Register(props) {
   }, [props.history, redirect, userInfo]);
 
   return (
- 
-
-  
    <div className="register-page" >
-  
-    <Form  onSubmit={submitHandler}>
-        
+    <Form  onSubmit={submitHandler}>   
     {loading && <Loading></Loading>}
     {error && <MessageBox variant="danger">{error}</MessageBox>}
     <Form.Group controlId="formBasicEmail">
@@ -51,7 +46,6 @@ export default function Register(props) {
     </Form.Group>
 
     <Form.Group controlId="formBasicEmail">
-       
        <Form.Label style={{color:"black",fontSize:"20px", fontFamily:"Times New Roman, Times, serif" }}> Nom du visiteur </Form.Label>
        <Form.Control 
        type="name" 
@@ -59,61 +53,54 @@ export default function Register(props) {
        placeholder="Entrer votre nom " 
        required 
        onChange={(e) => setName(e.target.value)} />
-   </Form.Group>
+    </Form.Group>
 
-        <Form.Group controlId="formBasicEmail">
-       
-            <Form.Label style={{color:"black",fontSize:"20px", fontFamily:"Times New Roman, Times, serif" }}> Adresse e-mail </Form.Label>
-            <Form.Control 
-            type="email" 
-            name="email" 
-            placeholder="Entrer votre adresse e-mail " 
-            required 
-            onChange={(e) => setEmail(e.target.value)} />
-        </Form.Group>
+    <Form.Group controlId="formBasicEmail">
+       <Form.Label style={{color:"black",fontSize:"20px", fontFamily:"Times New Roman, Times, serif" }}> Adresse e-mail </Form.Label>
+        <Form.Control 
+         type="email" 
+         name="email" 
+         placeholder="Entrer votre adresse e-mail " 
+         required 
+         onChange={(e) => setEmail(e.target.value)} />
+    </Form.Group>
 
-        <Form.Group controlId="formBasicPassword" style={{color:"black",fontSize:"20px", fontFamily:"Times New Roman, Times, serif" }}>
-            <Form.Label>Mot de passe</Form.Label>
-            <Form.Control 
-            type="password" 
-            name="password" 
-            placeholder="Entrer votre mot de passe"
-            required 
-            onChange={(e) => setPassword(e.target.value)}/>
-        </Form.Group>
-        <Form.Group controlId="formBasicPassword" style={{color:"black",fontSize:"20px", fontFamily:"Times New Roman, Times, serif" }}>
-            <Form.Label> Confirmer votre mot de passe</Form.Label>
-            <Form.Control 
-            type="password" 
-            name="password" 
-            placeholder="Confirmer votre mot de passe"
-            required 
-            onChange={(e) => setConfirmPassword(e.target.value)}/>
-        </Form.Group>
-      
-        <div>
-          <p>
+    <Form.Group controlId="formBasicPassword" style={{color:"black",fontSize:"20px", fontFamily:"Times New Roman, Times, serif" }}>
+       <Form.Label>Mot de passe</Form.Label>
+        <Form.Control 
+          type="password" 
+          name="password" 
+          placeholder="Entrer votre mot de passe"
+          required 
+          onChange={(e) => setPassword(e.target.value)}/>
+    </Form.Group>
 
-          </p>
-        </div>
-                
+    <Form.Group controlId="formBasicPassword" style={{color:"black",fontSize:"20px", fontFamily:"Times New Roman, Times, serif" }}>
+        <Form.Label> Confirmer votre mot de passe</Form.Label>
+         <Form.Control 
+           type="password" 
+           name="password" 
+           placeholder="Confirmer votre mot de passe"
+           required 
+           onChange={(e) => setConfirmPassword(e.target.value)}/>
+    </Form.Group>
+  <div>
+   <p>
+   </p>
+   </div>    
 
-            
-        <Button 
-            className="primary" 
-            type="submit">
-            Se connecter
-        </Button>
+      <Button 
+        className="primary" 
+        type="submit">
+        Se connecter
+      </Button>
 
-        <div>
-        <label />
-        <h3 style={{color:"black"}}> Avez vous déjà un compte? </h3> {' '}
-        <Link to={`/signin?redirect=${redirect}`}> <p style={{fontSize:"20px"}}> Cliquer ici pour se connecter</p></Link>
-        </div>
+    <div>
+      <label />
+       <h3 style={{color:"black"}}> Avez vous déjà un compte? </h3> {' '}
+       <Link to={`/signin?redirect=${redirect}`}> <p style={{fontSize:"20px"}}> Cliquer ici pour se connecter</p></Link>
+    </div>
     </Form>
    </div>
- 
-  
-
   );
 }

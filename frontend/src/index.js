@@ -7,9 +7,6 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import { BrowserRouter } from 'react-router-dom';
 import store from './store';
 
-
-
-
 ReactDOM.render(
   <Provider store={store}> 
   <React.StrictMode>

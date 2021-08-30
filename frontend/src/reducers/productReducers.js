@@ -87,7 +87,6 @@ export const productUpdateReducer = (state = {}, action) => {
       return state;
   }
 };
-
 /* DELETE PRODUCT */
 export const productDeleteReducer = (state = {}, action) => {
   switch (action.type) {

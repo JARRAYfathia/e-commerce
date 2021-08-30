@@ -8,8 +8,7 @@ const data = {
         price: 11,
         countInStock: 11,
         artiste: 'Fathia JR.',
-        description: 'high quality product',
-        availableSizes:["A2, A3"]
+        description: 'high quality product'
      },
      {
         _id: '2',
@@ -19,8 +18,7 @@ const data = {
         price: 12,
         countInStock: 12,
         artiste: 'Fathia JR.',
-        description: 'high quality product',
-        availableSizes:["A2, A3"]
+        description: 'high quality product'
      },
      {
         _id: '3',
@@ -30,8 +28,7 @@ const data = {
         price: 13,
         countInStock: 0,
         artiste: 'Fathia JR.',
-        description: 'high quality product',
-        availableSizes:["A2, A3"]
+        description: 'high quality product'
      },
      {
         _id: '4',
@@ -40,9 +37,8 @@ const data = {
         image: '/images/p4.jpg',
         price: 14,
         countInStock: 14,
-        artiste: 'Mouna BT.',
-        description: 'high quality product',
-        availableSizes:["A1, A4"]
+        artiste: 'Artiste BT.',
+        description: 'high quality product'
      },
      {
         _id: '5',
@@ -51,9 +47,8 @@ const data = {
         image: '/images/p5.jpg',
         price: 15,
         countInStock: 15,
-        artiste: 'Mouna BT.',
-        description: 'high quality product',
-        availableSizes:["A1, A4"]
+        artiste: 'Artiste BT.',
+        description: 'high quality product'
      },
      {
         _id: '6',
@@ -62,9 +57,8 @@ const data = {
         image: '/images/p6.jpg',
         price: 16,
         countInStock: 16,
-        artiste: 'Mouna BT.',
-        description: 'high quality product',
-        availableSizes:["A1, A4"]
+        artiste: 'Artiste BT.',
+        description: 'high quality product'
      },
     ],
 };

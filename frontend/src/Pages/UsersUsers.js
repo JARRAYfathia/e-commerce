@@ -1,6 +1,5 @@
 import React, { useEffect } from 'react'
 import { useDispatch, useSelector } from 'react-redux';
-
 import { deleteUser, listUsers } from '../actions/userActions';
 import Loading from '../components/Loading';
 import MessageBox from '../components/MessageBox';
@@ -15,7 +14,7 @@ export default function UsersUsers(props) {
     } = userList;
   
     //delete users
-    const userDelete = useSelector((state) => state.userDelete);
+  const userDelete = useSelector((state) => state.userDelete);
   const {
     loading: loadingDelete,
     error: errorDelete,
@@ -36,17 +35,12 @@ export default function UsersUsers(props) {
       if (window.confirm('Are you sure to delete?')) {
         dispatch(deleteUser(user._id));
       }
-    };
-    
-    
-
-    
-    return (
-      <div>
-        
-       <div className="row">
+    };   
+return (
+  <div>
+    <div className="row">
        <h2 style={{fontFamily:"Times New Roman, Times, serif", fontSize:"30px", color:"black", textAlign:"center"}}> Liste des clients</h2>
-        </div>
+    </div>
            {loadingDelete && <Loading/>}
            {errorDelete && <MessageBox  variant="danger">{errorDelete}</MessageBox >}
            {loading ? (
@@ -56,13 +50,11 @@ export default function UsersUsers(props) {
            ) : (
           <table className="table" id="products">
             <thead>
-            
               <tr style={{fontFamily:"Times New Roman, Times, serif", fontSize:"20px"}}>
                 <th> Identifiant</th>
                 <th>Nom de l'utilisateur</th>
                 <th>Email de l'utilisateur</th>
-               
-                 <th>Actions possibles</th>
+                <th>Actions possibles</th>
               </tr>
             </thead>
             <tbody style={{fontFamily:"Times New Roman, Times, serif", fontSize:"15px"}}>
@@ -70,16 +62,12 @@ export default function UsersUsers(props) {
                 <tr key={user._id}>
                   <td>{user._id}</td>
                   <td>{user.name}</td>
-                  <td>{user.email}</td>
-                 
-                 
-                  <td>
-                          
+                  <td>{user.email}</td>               
+                  <td>  
                     <button
                       type="button"
                       className="small"
-                      onClick={() => deleteHandler(user)}
-                    >
+                      onClick={() => deleteHandler(user)}>
                      Supprimer
                     </button>
                   </td>

@@ -117,7 +117,6 @@ export default function OrderScreen(props) {
                   </div>
                 </div>
               </li>
-              
             </ul>
           </div>
         </div>

@@ -30,9 +30,7 @@ const ProfileHome = (props) => {
                   props.history.push('/profileUpdate')}}>Mettre à jour</Button>
         </Card> 
         </div>
-        </div>
-       
-   
+        </div>  
     )
 }
 export default ProfileHome

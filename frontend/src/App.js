@@ -16,7 +16,6 @@ import ShippingAddressScreen from './Pages/ShippingAddressScreen';
 import OrderScreen from './Pages/OrderScreen';
 import MethodPaiement from './Pages/MethodPaiement';
 import Commande from './Pages/Commande';
-
 import AdminRoute from './components/AdminRoute';
 import PrivateRoute from './components/PrivateRoute';
 import ProductList from './Pages/ProductList';
@@ -30,25 +29,21 @@ function App() {
   const { cartItems } = cart;
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin; //get user info
-  
   const dispatch = useDispatch();
   const signoutHandler = () => {
         dispatch(signout());
   };
   
-  
-  return (
-    <div className="App">
-      <div className="grid-container">
-
-      <header className="row">
+return (
+  <div className="App">
+    <div className="grid-container">
+    <header className="row">
         <div>
         <Link to="/artista" style={{fontFamily:"Times New Roman, Times, serif", fontSize:"20px", color:"white"}}>Comment ca marche?</Link>
         <Link to="/home" style={{fontFamily:"Times New Roman, Times, serif", fontSize:"20px", color:"white"}}>Nos produits</Link>
         <Link to="/contact" style={{fontFamily:"Times New Roman, Times, serif", fontSize:"20px", color:"white"}}>Contact</Link>
         <Link  to="/contact" style={{fontFamily:" Brush Script MT, Brush Script Std, cursive",fontSize:"40px", color:"gold"}}> Artista</Link>
-
-           {/* panier du client */}
+         {/* panier du client */}
           <Link to="/cart" style={{fontFamily:"Times New Roman, Times, serif", fontSize:"20px", color:"white"}}>
              Mon panier
              {cartItems.length > 0 && ( 
@@ -62,7 +57,6 @@ function App() {
                 <Link to="#" style={{fontFamily:"Times New Roman, Times, serif", fontSize:"25px", color:"black"}}>
                  {userInfo.name} {' '}
                 </Link>
-
                 <ul className="dropdown-content">
                        <li>
                          <Link to="/profile"style={{fontFamily:"Times New Roman, Times, serif", fontSize:"15px", color:"red"}}>
@@ -78,7 +72,6 @@ function App() {
               <Link to="/signin" style={{fontFamily:"Times New Roman, Times, serif", fontSize:"20px", color:"white"}}>
                 Sign In</Link>
             )}
-            
      {/* admin view */}
      {/* check if user exist and if user is admin*/}
             {userInfo && userInfo.isAdmin && ( 
@@ -87,20 +80,15 @@ function App() {
                   Admin {' '}
                 </Link>
                 <ul className="dropdown-content">
-                 
                   <li> <Link to="/productlist" style={{fontFamily:"Times New Roman, Times, serif", fontSize:"15px", color:"red"}}>Produits</Link> </li>
                  <li>  <Link to="/userlist" style={{fontFamily:"Times New Roman, Times, serif", fontSize:"15px", color:"red"}}>Clients</Link> </li>
                 </ul>
               </div>
-            )}
-                             
-             
+            )}           
         </div>
-      </header>
-    
-      <main>
+    </header>
+    <main>
     <div>
-   
     </div>
     
       <Switch>
@@ -126,7 +114,7 @@ function App() {
             path="/productlist"
             component={ProductList}
           ></AdminRoute>
-       <AdminRoute
+        <AdminRoute
             path="/userlist"
             component={UsersUsers}
           ></AdminRoute>
@@ -134,14 +122,12 @@ function App() {
         <Route path="/order/:id" component={OrderScreen}></Route>
         <Route path="/*" component={Error}/>
       </Switch>
-     
+    </main>
 
-
-      </main>
     <footer className="row center">Copyirght © 2021, All rigths reserved JARRAY.F.</footer>
+
     </div>
     </div>
   );
 }
-
 export default App;

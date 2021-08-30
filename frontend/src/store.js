@@ -58,7 +58,6 @@ const reducer = combineReducers({
       productDelete: productDeleteReducer,
       userList: userListReducer,
       userDelete: userDeleteReducer,
-   
 });
 const composeEnhancer = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 const store = createStore(
@@ -66,6 +65,4 @@ const store = createStore(
   initialState,
   composeEnhancer(applyMiddleware(thunk))
 );
-
 export default store;
-

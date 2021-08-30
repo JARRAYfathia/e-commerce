@@ -10,7 +10,7 @@ const productRouter = express.Router();
 productRouter.get(
   '/', //will be added at the end of url 
   expressAsyncHandler(async (req, res) => {
-    const products = await Product.find({}); //find to get list of products (all)
+    const products = await Product.find({}); //find list of products (all)
     res.send(products);
   })
 ); 

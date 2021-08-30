@@ -18,7 +18,7 @@ export default function EditProduct(props) {
   const productDetails = useSelector((state) => state.productDetails);
   const { loading, error, product } = productDetails;
   
-//update produst
+//update product
   const productUpdate = useSelector((state) => state.productUpdate);
   const {
     loading: loadingUpdate,
@@ -83,9 +83,7 @@ export default function EditProduct(props) {
       setLoadingUpload(false);
     }
   };
-
   return (
-
     <div>
       <form className="form" onSubmit={submitHandler}>
         {loadingUpdate && <Loading></Loading>}

@@ -28,32 +28,31 @@ export default function ProductScreen(props) {
 ) : (
 
 <div>
-        <div className="row top">
+  <div className="row top">
 
-        <div className="column2">
-          <img  src={product.image} alt={product.name} style={{border:"1px solid #ddd"}}></img>
-        </div>
+      <div className="column2">
+         <img  src={product.image} alt={product.name} style={{border:"1px solid #ddd"}}></img>
+      </div>
 
-        <div className="column1">
+      <div className="column1">
           <ul>
             <li> Article: {product.name} </li>
             <li> Categorie: {product.category} </li>
-            <li>Prix : {product.price} TND </li>
+            <li> Prix : {product.price} TND </li>
             <li> Description:  {product.description} </li> 
-            
-            </ul>
+          </ul>
         </div>
           
-        <div className="column1" >
-          <div className="card card-body">
-            <ul>
-              <li>
+      <div className="column1" >
+         <div className="card card-body">
+           <ul>
+             <li>
                 <div className="row">
-                  <div>Prix: </div>
-                  <div className="price">{product.price} TND</div>
+                 <div>Prix: </div>
+                 <div className="price">{product.price} TND</div>
                 </div>
               </li>
-              <li>
+             <li>
                 <div className="row">
                   <div>Statut: </div>
                   <div>
@@ -73,8 +72,7 @@ export default function ProductScreen(props) {
                           <div>
                             <select
                               value={qty}
-                              onChange={(e) => setQty(e.target.value)}
-                            >
+                              onChange={(e) => setQty(e.target.value)}>
                               {[...Array(product.countInStock).keys()].map(
                                 (x) => (
                                   <option key={x + 1} value={x + 1}>
@@ -90,23 +88,17 @@ export default function ProductScreen(props) {
                         <button
                           onClick={addToCartHandler}
                           className="primary block" >
-
-                         Ajouter au panier
-                         
+                            Ajouter au panier                    
                         </button>
                       </li>
                     </>
                   )}
-              
-
             </ul>
           </div>
         </div>
       </div>
     </div>
-        
   )}
     </div>
-
   );
 }

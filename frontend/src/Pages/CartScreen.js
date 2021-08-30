@@ -40,16 +40,14 @@ export default function CartScreen(props) {
           <ul style={{fontFamily:"Times New Roman, Times, serif", fontSize:"15px"}}>
             {cartItems.map((item) => (
               <li key={item.product}>
-
                 <div className="item">
-                
-                  <div > 
+                   <div > 
                    <img
                       src={item.image}
                       alt={item.name}
                       className="small"
                     ></img>
-                  </div>
+                    </div>
 
                   <div className="min-30">
                     <Link to={`/product/${item.product}`}>{item.name}</Link>
@@ -86,7 +84,6 @@ export default function CartScreen(props) {
           </ul>
         )}
       </div>
-
 
       <div className="column1">
         <div className="card card-body">

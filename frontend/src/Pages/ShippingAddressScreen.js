@@ -17,7 +17,6 @@ export default function ShippingAddressScreen(props) {
   const [address, setAddress] = useState(shippingAddress.address);
   const [phone, setPhone] = useState(shippingAddress.phone);
   const [postalCode, setPostalCode] = useState(shippingAddress.postalCode);
-  
   const dispatch = useDispatch();
   const submitHandler = (e) => {
     e.preventDefault();
@@ -86,6 +85,7 @@ export default function ShippingAddressScreen(props) {
             Continuer
           </button>
         </div>
+        
       </form>
     </div>
   );

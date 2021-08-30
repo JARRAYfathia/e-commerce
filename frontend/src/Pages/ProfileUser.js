@@ -5,15 +5,13 @@ import Loading from '../components/Loading';
 import MessageBox from '../components/MessageBox';
 import { USER_UPDATE_PROFILE_RESET } from '../constants/userConstants';
 
-  
-
 export default function ProfileUser(props) {
-    //to update profile
+//to update profile
  const [name, setName] = useState('');
  const [email, setEmail] = useState('');
  const [password, setPassword] = useState('');
  const [confirmPassword, setConfirmPassword] = useState('');
- //sign in
+//sign in
   const userSignin = useSelector((state) => state.userSignin);
   const { userInfo } = userSignin;        // from usersignin i ll get user info
   const userDetails = useSelector((state) => state.userDetails);
@@ -41,13 +39,12 @@ export default function ProfileUser(props) {
   const submitHandler = (e) => {
     e.preventDefault();
 
-    // dispatch update profile
+// dispatch update profile
         if (password !== confirmPassword) { //comparer les mots de passe
         alert(' Confirm Password Please!');
       } else {
         dispatch(updateUserProfile({ userId: user._id, name, email, password }));
       }
-
   };
   return (
     <div className='profileUserBG'>
@@ -69,8 +66,6 @@ export default function ProfileUser(props) {
             {successUpdate && (
               <MessageBox variant="success"> Profile Updated Successfully! </MessageBox>
             )}
-        
-            
             <div>
               <label htmlFor="name">Nom complet</label>
               <input
@@ -82,6 +77,7 @@ export default function ProfileUser(props) {
                 onChange={(e) => setName(e.target.value)}
               ></input>
             </div>
+
             <div>
               <label htmlFor="email"> Adresse e-mail</label>
               <input
@@ -102,6 +98,7 @@ export default function ProfileUser(props) {
                 onChange={(e) => setPassword(e.target.value)}
               ></input>
             </div>
+
             <div>
               <label htmlFor="confirmPassword">Confirmer votre mot de passe</label>
               <input
@@ -122,7 +119,6 @@ export default function ProfileUser(props) {
               fontSize: "36px",   
               cursor: "pointer"}} 
               type="submit"
-              
               onClick={() => {
                 props.history.push('/profileUpdate')}}>
                 Mettre à jour
